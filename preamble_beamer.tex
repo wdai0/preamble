@@ -1,0 +1,134 @@
+% for use in Beamer
+\usetheme{CambridgeUS}
+\usecolortheme{spruce}
+\usefonttheme{professionalfonts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%                 packages                 %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, bm, amsfonts}
+% optional: when use graphics
+\usepackage{graphicx, xcolor}
+% packages for algorithm plot demo
+\usepackage{algpseudocode}
+% if need to use caption for algorithm
+\usepackage{algorithm}
+
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+% input pictures and put where is desgined to 
+\usepackage{float}
+% bib control: \citet and \citep
+\usepackage{natbib}
+
+%\usepackage{biblatex}
+% add biblatex file(s)
+%\addbibresource{xxx.bib}
+
+% modify the behaviour of indenting the first paragraph after section
+%\usepackage{indentfirst} 
+% change \label \ref to hyperlinks, and more
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%            newly defined symbols         %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% \ud(upright d) used in differenitial and integrals
+\newcommand{\ud}{\,\mathrm{d}}
+% easy iid
+\newcommand{\iid}{\overset{i.i.d.}{\sim}}
+% easy E, Var, Cov
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+% arg min
+\DeclareMathOperator*{\argmin}{arg\,min}
+% arg max
+\DeclareMathOperator*{\argmax}{arg\,max}
+% prox operator
+\DeclareMathOperator*{\prox}{\mathbf{prox}}
+
+% with respect to
+\newcommand{\wrt}{w.r.t.~}
+% transpose 
+\newcommand{\tsps}{\intercal}
+% 1st: 1\ts{st} for dates, rank, etc
+\newcommand{\ts}{\textsuperscript}
+
+\newcommand{\hl}{\textcolor{red}}
+
+\input{new_cmd.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%         theorem etc. environment         %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%\theoremstyle{plain}
+%\newtheorem{axiom}{Axiom}
+%\newtheorem{claim}[axiom]{Claim}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{remark}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem*{example}{Example}
+%\newtheorem*{fact}{Fact}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%                 settings                 %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% settings
+%\setlength{\parindent}{0pt}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan
+    }
+
+% graphic path for inserting image    
+%\graphicspath{ {image/} }
+
+% beamer color setup
+\definecolor{MasonGreen}{RGB}{30, 98, 56}
+\definecolor{MasonGold}{RGB}{226, 168, 43}
+
+\setbeamercolor{palette primary}{bg=MasonGreen, fg=white}
+\setbeamercolor{palette secondary}{bg=MasonGold,fg=white}
+\setbeamercolor{block title}{bg=MasonGold!80, fg=MasonGreen}
+\setbeamercolor{frametitle}{bg=MasonGreen, fg=white}
+\setbeamercolor{structure}{fg=MasonGold}
+%\setbeamercolor{block body}{bg=MasonGreen}
+%\setbeamercolor{block title}{bg=MasonGold}
+
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}[frame number]{}
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate items}[square]
+
+%gets rid of bottom navigation bars
+%\setbeamertemplate{footline}[frame number]{}
+%gets rid of bottom navigation symbols
+%\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{footline}{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%              end of preamble             %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 

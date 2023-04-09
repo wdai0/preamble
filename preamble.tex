@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%                 packages                 %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm, bm}
+% optional: when use graphics
+\usepackage{graphicx, color}
+
+%%gmu style
+%put gmudissertation.sty under the same folder
+%\usepackage{gmudissertation}
+
+% set paper margins as a4 default
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+% disable ligatures associated with f, e.g. ff, fi
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% a package to arrange figures, captions, e.g. [H]: Places the float at precisely the location in the LaTeX code 
+\usepackage{float}
+
+% change \label \ref to hyperlinks, and more
+\usepackage{hyperref}
+
+% bib
+\usepackage{natbib}
+
+%% packages for algorithm plot demo
+%\usepackage{algpseudocode}
+%% if need to use caption for algorithm
+%\usepackage{algorithm}
+
+%\usepackage{biblatex}
+% add biblatex file(s)
+%\addbibresource{}
+
+% modify the behaviour of indenting the first paragraph after section
+\usepackage{indentfirst} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%            newly defined symbols         %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% \ud(upright d) used in differenitial and integrals
+\newcommand{\ud}{\,\mathrm{d}}
+% easy iid
+\newcommand{\iid}{\overset{i.i.d.}{\sim}}
+% easy Prob, E, Var, Cov
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+% arg min
+\DeclareMathOperator*{\argmin}{arg\,min}
+% arg max
+\DeclareMathOperator*{\argmax}{arg\,max}
+% prox operator
+\DeclareMathOperator*{\prox}{\mathbf{prox}}
+% with respect to
+\newcommand{\wrt}{w.r.t.~}
+% transpose 
+\newcommand{\tsps}{\intercal}
+% 1st: 1\ts{st} for dates, rank, etc
+\newcommand{\ts}{\textsuperscript}
+%\newcommand{\hl}{\textcolor{red}}
+
+% new commands with input  
+\input{new_cmd.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%         theorem etc. environment         %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%\theoremstyle{plain}
+%\newtheorem{axiom}{Axiom}
+%\newtheorem{claim}[axiom]{Claim}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{remark}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem*{example}{Example}
+%\newtheorem*{fact}{Fact}
+\newenvironment{problem}[2][Problem]{\textbf{#1 #2}}{} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%                 settings                 %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% settings
+%\setlength{\parindent}{0pt}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan, 
+    citecolor=blue
+    %filecolor=blue,      
+    %urlcolor=blue
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%%              end of preamble             %% 
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
